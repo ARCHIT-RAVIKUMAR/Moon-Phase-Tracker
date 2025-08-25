@@ -2,16 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Moon Phase Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Moon Phase Viewer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #0b0c10;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .moon-card {
+      background: #1f2833;
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 8px;
+      width: 200px;
+    }
+    .moon-emoji {
+      font-size: 48px;
+    }
+    .moon-label {
+      margin-top: 8px;
+      font-size: 1em;
+    }
+  </style>
 </head>
 <body>
-  <h1>🌕 Moon Phase Today</h1>
-  <div id="today" class="moon-phase"></div>
+  <h1>🌕 Moon Phase Viewer</h1>
 
-  <button onclick="showNext7Days()">Next 7 Days</button>
-  <div id="next7" class="moon-grid"></div>
+  <div class="moon-card">
+    <div class="moon-emoji">🌒</div>
+    <div class="moon-label">Waxing Crescent</div>
+    <div>25 August 2025</div>
+  </div>
 
-  <script src="script.js"></script>
+  <h2>Next 7 Days</h2>
+
+  <div class="moon-card">
+    <div class="moon-emoji">🌓</div>
+    <div class="moon-label">First Quarter</div>
+    <div>26 August</div>
+  </div>
+  <div class="moon-card">
+    <div class="moon-emoji">🌔</div>
+    <div class="moon-label">Waxing Gibbous</div>
+    <div>27 August</div>
+  </div>
+  <div class="moon-card">
+    <div class="moon-emoji">🌕</div>
+    <div class="moon-label">Full Moon</div>
+    <div>28 August</div>
+  </div>
+  <div class="moon-card">
+    <div class="moon-emoji">🌖</div>
+    <div class="moon-label">Waning Gibbous</div>
+    <div>29 August</div>
+  </div>
+  <div class="moon-card">
+    <div class="moon-emoji">🌗</div>
+    <div class="moon-label">Last Quarter</div>
+    <div>30 August</div>
+  </div>
+  <div class="moon-card">
+    <div class="moon-emoji">🌘</div>
+    <div class="moon-label">Waning Crescent</div>
+    <div>31 August</div>
+  </div>
+  <div class="moon-card">
+    <div class="moon-emoji">🌑</div>
+    <div class="moon-label">New Moon</div>
+    <div>1 September</div>
+  </div>
 </body>
 </html>
