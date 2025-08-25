@@ -16,7 +16,8 @@
       margin: 10px auto;
       padding: 15px;
       border-radius: 8px;
-      width: 200px;
+      width: 220px;
+      display: none;
     }
     .moon-emoji {
       font-size: 48px;
@@ -25,53 +26,87 @@
       margin-top: 8px;
       font-size: 1em;
     }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #45a29e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #66fcf1;
+      color: #0b0c10;
+    }
   </style>
 </head>
 <body>
   <h1>🌕 Moon Phase Viewer</h1>
 
-  <div class="moon-card">
+  <div class="moon-card" style="display: block;">
     <div class="moon-emoji">🌒</div>
     <div class="moon-label">Waxing Crescent</div>
     <div>25 August 2025</div>
   </div>
 
-  <h2>Next 7 Days</h2>
+  <h2>Choose a Date</h2>
 
-  <div class="moon-card">
+  <button onclick="showPhase('day1')">26 Aug</button>
+  <button onclick="showPhase('day2')">27 Aug</button>
+  <button onclick="showPhase('day3')">28 Aug</button>
+  <button onclick="showPhase('day4')">29 Aug</button>
+  <button onclick="showPhase('day5')">30 Aug</button>
+  <button onclick="showPhase('day6')">31 Aug</button>
+  <button onclick="showPhase('day7')">1 Sep</button>
+
+  <div id="day1" class="moon-card">
     <div class="moon-emoji">🌓</div>
     <div class="moon-label">First Quarter</div>
     <div>26 August</div>
   </div>
-  <div class="moon-card">
+  <div id="day2" class="moon-card">
     <div class="moon-emoji">🌔</div>
     <div class="moon-label">Waxing Gibbous</div>
     <div>27 August</div>
   </div>
-  <div class="moon-card">
+  <div id="day3" class="moon-card">
     <div class="moon-emoji">🌕</div>
     <div class="moon-label">Full Moon</div>
     <div>28 August</div>
   </div>
-  <div class="moon-card">
+  <div id="day4" class="moon-card">
     <div class="moon-emoji">🌖</div>
     <div class="moon-label">Waning Gibbous</div>
     <div>29 August</div>
   </div>
-  <div class="moon-card">
+  <div id="day5" class="moon-card">
     <div class="moon-emoji">🌗</div>
     <div class="moon-label">Last Quarter</div>
     <div>30 August</div>
   </div>
-  <div class="moon-card">
+  <div id="day6" class="moon-card">
     <div class="moon-emoji">🌘</div>
     <div class="moon-label">Waning Crescent</div>
     <div>31 August</div>
   </div>
-  <div class="moon-card">
+  <div id="day7" class="moon-card">
     <div class="moon-emoji">🌑</div>
     <div class="moon-label">New Moon</div>
     <div>1 September</div>
   </div>
+
+  <script>
+    function showPhase(id) {
+      const cards = document.querySelectorAll('.moon-card');
+      cards.forEach(card => {
+        if (card.id === id) {
+          card.style.display = 'block';
+        } else if (card.id) {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
