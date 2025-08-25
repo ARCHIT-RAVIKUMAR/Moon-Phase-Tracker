@@ -2,24 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moon Phase Tracker</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0d1b2a;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 { color: #f1faee; }
-    .moon-container {
-      margin: 20px auto;
-      max-width: 400px;
-      padding: 20px;
-      background: #1b263b;
-      border-radius: 12px;
-    }
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🌕 Moon Phase Today</h1>
+  <div id="today" class="moon-phase"></div>
+
+  <button onclick="showNext7Days()">Next 7 Days</button>
+  <div id="next7" class="moon-grid"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
     .moon-phase {
       font-size: 1.2em;
       margin-top: 10px;
